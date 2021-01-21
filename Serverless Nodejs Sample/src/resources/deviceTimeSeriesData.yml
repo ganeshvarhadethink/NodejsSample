@@ -1,0 +1,16 @@
+Resources:
+  deviceResponseTimeData:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: deviceResponseTimeData
+      AttributeDefinitions:
+        - AttributeName: device_uid
+          AttributeType: S
+        - AttributeName: timestamp
+          AttributeType: N
+      KeySchema:
+        - AttributeName: device_uid
+          KeyType: HASH
+        - AttributeName: timestamp
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST

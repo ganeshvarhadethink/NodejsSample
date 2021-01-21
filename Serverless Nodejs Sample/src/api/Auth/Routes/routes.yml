@@ -1,0 +1,51 @@
+login:
+  handler: src/api/Auth/Controllers/AuthController.login
+  events:
+    - http:
+        path: login_user
+        method: post
+        cors: true
+
+signUp:
+  handler: src/api/Auth/Controllers/AuthController.signUp
+  events:
+    - http:
+        path: signup_user
+        method: post
+        cors: true
+
+sendMail:
+  handler: src/api/Auth/Controllers/AuthController.sendMail
+  events:
+    - http:
+        path: send_mail
+        method: get
+        cors: true
+
+verifyEmail:
+  handler: src/api/Auth/Controllers/AuthController.verifyEmail
+  events:
+    - http:
+        path: verify_email
+        method: post
+        cors: true
+
+forgotPassword:
+  handler: src/api/Auth/Controllers/AuthController.forgotPassword
+  events:
+    - http:
+        path: forgot_password
+        method: post
+        cors: true
+  # warmup:
+  #   enabled: true
+
+confirmPassword:
+  handler: src/api/Auth/Controllers/AuthController.confirmPassword
+  events:
+    - http:
+        path: confirm_password
+        method: post
+        cors: true
+verify-token:
+  handler: src/resources/utils.Validate

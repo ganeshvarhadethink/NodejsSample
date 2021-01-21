@@ -1,0 +1,56 @@
+getProviderById:
+  handler: src/api/Organization/Controllers/ProviderController.getProviderById
+  events:
+    - http:
+        path: get_organization_byId
+        method: get
+        cors: true
+getAllProviders:
+  handler: src/api/Organization/Controllers/ProviderController.getAllProviders
+  events:
+    - http:
+        path: get_all_organizations
+        method: get
+        cors: true
+
+createProvider:
+  handler: src/api/Organization/Controllers/ProviderController.createProvider
+  events:
+    - http:
+        path: create_organization
+        method: post
+        cors: true
+  warmup:
+    enabled: true
+
+updateProvider:
+  handler: src/api/Organization/Controllers/ProviderController.updateProvider
+  events:
+    - http:
+        path: update_organization
+        method: post
+        cors: true
+
+deleteProvider:
+  handler: src/api/Organization/Controllers/ProviderController.deleteProvider
+  events:
+    - http:
+        path: delete_organization
+        method: post
+        cors: true
+
+getOrgByStatus:
+  handler: src/api/Organization/Controllers/ProviderController.getOrgByStatus
+  events:
+    - http:
+        path: get_org_by_status
+        method: get
+        cors: true
+
+getActiveCountforOrg:
+  handler: src/api/Organization/Controllers/ProviderController.getActiveCountforOrg
+  events:
+    - http:
+        path: get_active_count_by_org
+        method: get
+        cors: true

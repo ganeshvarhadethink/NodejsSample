@@ -1,0 +1,37 @@
+{
+  "name": "userservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.7.1",
+    "amazon-cognito-identity-js": "^4.2.1",
+    "dotenv": "^8.2.0",
+    "elasticsearch": "^16.7.1",
+    "http-aws-es": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwk-to-pem": "^2.0.4",
+    "node-fetch": "^2.6.0",
+    "pg": "^8.0.2",
+    "pg-hstore": "^2.3.3",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "sequelize": "^5.21.6",
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "serverless": "^1.72.0",
+    "serverless-domain-manager": "^4.1.1",
+    "serverless-nested-stack": "0.0.7",
+    "serverless-offline": "^6.3.1",
+    "serverless-plugin-split-stacks": "^1.9.3",
+    "serverless-plugin-warmup": "^4.9.0",
+    "serverless-webpack": "^5.3.2",
+    "webpack": "^4.43.0"
+  }
+}

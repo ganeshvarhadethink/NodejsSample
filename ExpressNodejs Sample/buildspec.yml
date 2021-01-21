@@ -1,0 +1,19 @@
+phases:
+  install:
+    commands:
+      # Update libs
+      - apt-get update
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm start
+  post_build:
+    commands:
+
+artifacts:
+  files:
+    - "**/*.js"
+
+  discard-paths: yes
